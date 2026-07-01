@@ -1,0 +1,205 @@
+[2026-07-01 10:13:02][notice]Start restoring themes.
+[2026-07-01 10:13:02][notice]Extracting file:woocommerce-1264690-5911740.cloudwaysapps.com_wpvivid-f6b16181e4c12_2026-07-01-10-12_backup_all.zip
+[2026-07-01 10:13:02][notice]Extracting file:woocommerce-1264690-5911740.cloudwaysapps.com_wpvivid-f6b16181e4c12_2026-07-01-10-12_backup_all.zip succeeded.
+[2026-07-01 10:13:02][notice]Extracting file:woocommerce-1264690-5911740.cloudwaysapps.com_wpvivid-f6b16181e4c12_2026-07-01-10-12_backup_themes.zip index:0
+[2026-07-01 10:13:02][notice]Extracting file:woocommerce-1264690-5911740.cloudwaysapps.com_wpvivid-f6b16181e4c12_2026-07-01-10-12_backup_themes.zip index:0 finished.
+[2026-07-01 10:13:02][notice]End restore themes.
+[2026-07-01 10:13:03][notice]Start restoring plugin.
+[2026-07-01 10:13:03][notice]Extracting file:woocommerce-1264690-5911740.cloudwaysapps.com_wpvivid-f6b16181e4c12_2026-07-01-10-12_backup_all.zip
+[2026-07-01 10:13:03][notice]Extracting file:woocommerce-1264690-5911740.cloudwaysapps.com_wpvivid-f6b16181e4c12_2026-07-01-10-12_backup_all.zip succeeded.
+[2026-07-01 10:13:04][notice]Extracting file:woocommerce-1264690-5911740.cloudwaysapps.com_wpvivid-f6b16181e4c12_2026-07-01-10-12_backup_plugin.zip index:0
+[2026-07-01 10:13:04][notice]Extracting file:woocommerce-1264690-5911740.cloudwaysapps.com_wpvivid-f6b16181e4c12_2026-07-01-10-12_backup_plugin.zip index:0 finished.
+[2026-07-01 10:13:04][notice]End restore plugin.
+[2026-07-01 10:13:05][notice]Start restoring wp-content.
+[2026-07-01 10:13:05][notice]Extracting file:woocommerce-1264690-5911740.cloudwaysapps.com_wpvivid-f6b16181e4c12_2026-07-01-10-12_backup_all.zip
+[2026-07-01 10:13:05][notice]Extracting file:woocommerce-1264690-5911740.cloudwaysapps.com_wpvivid-f6b16181e4c12_2026-07-01-10-12_backup_all.zip succeeded.
+[2026-07-01 10:13:05][notice]Extracting file:woocommerce-1264690-5911740.cloudwaysapps.com_wpvivid-f6b16181e4c12_2026-07-01-10-12_backup_content.zip index:0
+[2026-07-01 10:13:05][notice]Extracting file:woocommerce-1264690-5911740.cloudwaysapps.com_wpvivid-f6b16181e4c12_2026-07-01-10-12_backup_content.zip index:0 finished.
+[2026-07-01 10:13:05][notice]End restore wp-content.
+[2026-07-01 10:13:07][notice]Start restoring wp-core.
+[2026-07-01 10:13:07][notice]Extracting file:woocommerce-1264690-5911740.cloudwaysapps.com_wpvivid-f6b16181e4c12_2026-07-01-10-12_backup_all.zip
+[2026-07-01 10:13:07][notice]Extracting file:woocommerce-1264690-5911740.cloudwaysapps.com_wpvivid-f6b16181e4c12_2026-07-01-10-12_backup_all.zip succeeded.
+[2026-07-01 10:13:07][notice]Extracting file:woocommerce-1264690-5911740.cloudwaysapps.com_wpvivid-f6b16181e4c12_2026-07-01-10-12_backup_core.zip
+[2026-07-01 10:13:08][notice]Extracting file:woocommerce-1264690-5911740.cloudwaysapps.com_wpvivid-f6b16181e4c12_2026-07-01-10-12_backup_core.zip succeeded.
+[2026-07-01 10:13:08][notice]End restore wp-core.
+[2026-07-01 10:13:09][notice]Start restoring databases.
+[2026-07-01 10:13:09][notice]Extracting file:woocommerce-1264690-5911740.cloudwaysapps.com_wpvivid-f6b16181e4c12_2026-07-01-10-12_backup_all.zip
+[2026-07-01 10:13:09][notice]Extracting file:woocommerce-1264690-5911740.cloudwaysapps.com_wpvivid-f6b16181e4c12_2026-07-01-10-12_backup_all.zip finished.
+[2026-07-01 10:13:09][notice]Extracting file:D:\eos\vclc/wp-content\wpvividbackups\woocommerce-1264690-5911740.cloudwaysapps.com_wpvivid-f6b16181e4c12_2026-07-01-10-12_backup_db.zip
+[2026-07-01 10:13:09][notice]Extracting file:D:\eos\vclc/wp-content\wpvividbackups\woocommerce-1264690-5911740.cloudwaysapps.com_wpvivid-f6b16181e4c12_2026-07-01-10-12_backup_db.zip finished.
+[2026-07-01 10:13:09][notice]End restore databases.
+[2026-07-01 10:13:11][notice]Start restoring databases.
+[2026-07-01 10:13:11][notice]Start restoring sql file offset:0
+[2026-07-01 10:13:11][notice]The test to drop table succeeds.
+[2026-07-01 10:13:11][notice]Drop table if exist tmp5077fc_links
+[2026-07-01 10:13:11][notice]Creating table tmp5077fc_links
+[2026-07-01 10:13:11][notice]Drop table if exist tmp5077fc_term_relationships
+[2026-07-01 10:13:11][notice]Creating table tmp5077fc_term_relationships
+[2026-07-01 10:13:11][notice]Drop table if exist tmp5077fc_commentmeta
+[2026-07-01 10:13:11][notice]Creating table tmp5077fc_commentmeta
+[2026-07-01 10:13:11][notice]Drop table if exist tmp5077fc_term_taxonomy
+[2026-07-01 10:13:11][notice]Creating table tmp5077fc_term_taxonomy
+[2026-07-01 10:13:11][notice]Drop table if exist tmp5077fc_termmeta
+[2026-07-01 10:13:11][notice]Creating table tmp5077fc_termmeta
+[2026-07-01 10:13:11][notice]Drop table if exist tmp5077fc_terms
+[2026-07-01 10:13:11][notice]Creating table tmp5077fc_terms
+[2026-07-01 10:13:11][notice]Drop table if exist tmp5077fc_usermeta
+[2026-07-01 10:13:11][notice]Creating table tmp5077fc_usermeta
+[2026-07-01 10:13:11][notice]Drop table if exist tmp5077fc_users
+[2026-07-01 10:13:11][notice]Creating table tmp5077fc_users
+[2026-07-01 10:13:11][notice]Drop table if exist tmp5077fc_comments
+[2026-07-01 10:13:11][notice]Creating table tmp5077fc_comments
+[2026-07-01 10:13:12][notice]Drop table if exist tmp5077fc_options
+[2026-07-01 10:13:12][notice]Creating table tmp5077fc_options
+[2026-07-01 10:13:12][notice]Drop table if exist tmp5077fc_posts
+[2026-07-01 10:13:12][notice]Creating table tmp5077fc_posts
+[2026-07-01 10:13:13][notice]Drop table if exist tmp5077fc_postmeta
+[2026-07-01 10:13:13][notice]Creating table tmp5077fc_postmeta
+[2026-07-01 10:13:19][notice]Reading sql file completed offset:5243075
+[2026-07-01 10:13:19][notice]End restore databases.
+[2026-07-01 10:13:21][notice]Start restoring databases.
+[2026-07-01 10:13:21][notice]Start restoring sql file offset:5243075
+[2026-07-01 10:13:21][notice]The test to drop table succeeds.
+[2026-07-01 10:13:22][notice]Start replacing table tmp5077fc_links offset:0
+[2026-07-01 10:13:22][notice]
+[2026-07-01 10:13:22][notice]Counting of rows in tmp5077fc_links: 0
+[2026-07-01 10:13:22][notice]End restore databases.
+[2026-07-01 10:13:24][notice]Start restoring databases.
+[2026-07-01 10:13:24][notice]Start replacing table tmp5077fc_term_relationships offset:0
+[2026-07-01 10:13:24][notice]
+[2026-07-01 10:13:24][Warning]Skipping table tmp5077fc_term_relationships
+[2026-07-01 10:13:24][notice]End restore databases.
+[2026-07-01 10:13:25][notice]Start restoring databases.
+[2026-07-01 10:13:25][notice]Start replacing table tmp5077fc_commentmeta offset:0
+[2026-07-01 10:13:25][notice]
+[2026-07-01 10:13:25][notice]Counting of rows in tmp5077fc_commentmeta: 28
+[2026-07-01 10:13:25][notice]Replacing the row in 0 line.
+[2026-07-01 10:13:25][notice]Replacing row completed. Current row:5000
+[2026-07-01 10:13:25][notice]{"result":"success","replace_row":5000,"max_replace_row":10000,"current_replace_table_finish":true,"last_msg":"Importing sql file table: tmp5077fc_commentmeta Replaced row: 0\/28;"}
+[2026-07-01 10:13:25][notice]End restore databases.
+[2026-07-01 10:13:27][notice]Start restoring databases.
+[2026-07-01 10:13:27][notice]Start replacing table tmp5077fc_term_taxonomy offset:0
+[2026-07-01 10:13:27][notice]
+[2026-07-01 10:13:27][notice]Counting of rows in tmp5077fc_term_taxonomy: 62
+[2026-07-01 10:13:27][notice]Replacing the row in 0 line.
+[2026-07-01 10:13:27][notice]Replacing row completed. Current row:5000
+[2026-07-01 10:13:27][notice]{"result":"success","replace_row":5000,"max_replace_row":10000,"current_replace_table_finish":true,"last_msg":"Importing sql file table: tmp5077fc_term_taxonomy Replaced row: 0\/62;"}
+[2026-07-01 10:13:27][notice]End restore databases.
+[2026-07-01 10:13:28][notice]Start restoring databases.
+[2026-07-01 10:13:28][notice]Start replacing table tmp5077fc_termmeta offset:0
+[2026-07-01 10:13:28][notice]
+[2026-07-01 10:13:28][notice]Counting of rows in tmp5077fc_termmeta: 38
+[2026-07-01 10:13:28][notice]Replacing the row in 0 line.
+[2026-07-01 10:13:28][notice]Replacing row completed. Current row:5000
+[2026-07-01 10:13:28][notice]{"result":"success","replace_row":5000,"max_replace_row":10000,"current_replace_table_finish":true,"last_msg":"Importing sql file table: tmp5077fc_termmeta Replaced row: 0\/38;"}
+[2026-07-01 10:13:28][notice]End restore databases.
+[2026-07-01 10:13:30][notice]Start restoring databases.
+[2026-07-01 10:13:30][notice]Start replacing table tmp5077fc_terms offset:0
+[2026-07-01 10:13:30][notice]
+[2026-07-01 10:13:30][notice]Counting of rows in tmp5077fc_terms: 62
+[2026-07-01 10:13:30][notice]Replacing the row in 0 line.
+[2026-07-01 10:13:30][notice]Replacing row completed. Current row:5000
+[2026-07-01 10:13:30][notice]{"result":"success","replace_row":5000,"max_replace_row":10000,"current_replace_table_finish":true,"last_msg":"Importing sql file table: tmp5077fc_terms Replaced row: 0\/62;"}
+[2026-07-01 10:13:30][notice]End restore databases.
+[2026-07-01 10:13:31][notice]Start restoring databases.
+[2026-07-01 10:13:31][notice]Start replacing table tmp5077fc_usermeta offset:0
+[2026-07-01 10:13:31][notice]
+[2026-07-01 10:13:31][notice]Counting of rows in tmp5077fc_usermeta: 119
+[2026-07-01 10:13:31][notice]Replacing the row in 0 line.
+[2026-07-01 10:13:31][notice]Replacing row completed. Current row:5000
+[2026-07-01 10:13:31][notice]{"result":"success","replace_row":5000,"max_replace_row":10000,"current_replace_table_finish":true,"last_msg":"Importing sql file table: tmp5077fc_usermeta Replaced row: 0\/119;"}
+[2026-07-01 10:13:31][notice]End restore databases.
+[2026-07-01 10:13:33][notice]Start restoring databases.
+[2026-07-01 10:13:33][notice]Start replacing table tmp5077fc_users offset:0
+[2026-07-01 10:13:33][notice]
+[2026-07-01 10:13:33][notice]Counting of rows in tmp5077fc_users: 2
+[2026-07-01 10:13:33][notice]Replacing the row in 0 line.
+[2026-07-01 10:13:33][notice]Replacing row completed. Current row:5000
+[2026-07-01 10:13:33][notice]{"result":"success","replace_row":5000,"max_replace_row":10000,"current_replace_table_finish":true,"last_msg":"Importing sql file table: tmp5077fc_users Replaced row: 0\/2;"}
+[2026-07-01 10:13:33][notice]End restore databases.
+[2026-07-01 10:13:34][notice]Start restoring databases.
+[2026-07-01 10:13:34][notice]Start replacing table tmp5077fc_comments offset:0
+[2026-07-01 10:13:34][notice]
+[2026-07-01 10:13:34][notice]Counting of rows in tmp5077fc_comments: 917
+[2026-07-01 10:13:34][notice]Replacing the row in 0 line.
+[2026-07-01 10:13:34][notice]Replacing row completed. Current row:5000
+[2026-07-01 10:13:34][notice]{"result":"success","replace_row":5000,"max_replace_row":10000,"current_replace_table_finish":true,"last_msg":"Importing sql file table: tmp5077fc_comments Replaced row: 0\/917;"}
+[2026-07-01 10:13:34][notice]End restore databases.
+[2026-07-01 10:13:36][notice]Start restoring databases.
+[2026-07-01 10:13:36][notice]Start replacing table tmp5077fc_options offset:0
+[2026-07-01 10:13:36][notice]
+[2026-07-01 10:13:36][notice]Counting of rows in tmp5077fc_options: 695
+[2026-07-01 10:13:36][notice]Replacing the row in 0 line.
+[2026-07-01 10:13:36][notice]Replacing row completed. Current row:5000
+[2026-07-01 10:13:36][notice]{"result":"success","replace_row":5000,"max_replace_row":10000,"current_replace_table_finish":true,"last_msg":"Importing sql file table: tmp5077fc_options Replaced row: 0\/695;"}
+[2026-07-01 10:13:36][notice]End restore databases.
+[2026-07-01 10:13:37][notice]Start restoring databases.
+[2026-07-01 10:13:37][notice]Start replacing table tmp5077fc_posts offset:0
+[2026-07-01 10:13:37][notice]
+[2026-07-01 10:13:37][notice]Counting of rows in tmp5077fc_posts: 619
+[2026-07-01 10:13:37][notice]Replacing the row in 0 line.
+[2026-07-01 10:13:37][notice]Replacing row completed. Current row:5000
+[2026-07-01 10:13:37][notice]{"result":"success","replace_row":5000,"max_replace_row":10000,"current_replace_table_finish":true,"last_msg":"Importing sql file table: tmp5077fc_posts Replaced row: 0\/619;"}
+[2026-07-01 10:13:37][notice]End restore databases.
+[2026-07-01 10:13:39][notice]Start restoring databases.
+[2026-07-01 10:13:39][notice]Start replacing table tmp5077fc_postmeta offset:0
+[2026-07-01 10:13:39][notice]
+[2026-07-01 10:13:39][notice]Counting of rows in tmp5077fc_postmeta: 34335
+[2026-07-01 10:13:39][notice]Replacing the row in 0 line.
+[2026-07-01 10:13:39][notice]Replacing the row in 5000 line.
+[2026-07-01 10:13:39][notice]Replacing the row in 10000 line.
+[2026-07-01 10:13:39][notice]Replacing row completed. Current row:15000
+[2026-07-01 10:13:39][notice]{"result":"success","replace_row":15000,"max_replace_row":10000,"current_replace_table_finish":false,"last_msg":"Importing sql file table: tmp5077fc_postmeta Replaced row: 10000\/34335;"}
+[2026-07-01 10:13:39][notice]End restore databases.
+[2026-07-01 10:13:41][notice]Start restoring databases.
+[2026-07-01 10:13:41][notice]Start replacing table tmp5077fc_postmeta offset:15000
+[2026-07-01 10:13:41][notice]
+[2026-07-01 10:13:41][notice]Counting of rows in tmp5077fc_postmeta: 34335
+[2026-07-01 10:13:41][notice]Replacing the row in 15000 line.
+[2026-07-01 10:13:41][notice]Replacing the row in 20000 line.
+[2026-07-01 10:13:41][notice]Replacing the row in 25000 line.
+[2026-07-01 10:13:41][notice]Replacing row completed. Current row:30000
+[2026-07-01 10:13:41][notice]{"result":"success","replace_row":30000,"max_replace_row":10000,"current_replace_table_finish":false,"last_msg":"Importing sql file table: tmp5077fc_postmeta Replaced row: 25000\/34335;"}
+[2026-07-01 10:13:41][notice]End restore databases.
+[2026-07-01 10:13:43][notice]Start restoring databases.
+[2026-07-01 10:13:43][notice]Start replacing table tmp5077fc_postmeta offset:30000
+[2026-07-01 10:13:43][notice]
+[2026-07-01 10:13:43][notice]Counting of rows in tmp5077fc_postmeta: 34335
+[2026-07-01 10:13:43][notice]Replacing the row in 30000 line.
+[2026-07-01 10:13:43][notice]Replacing row completed. Current row:35000
+[2026-07-01 10:13:43][notice]{"result":"success","replace_row":35000,"max_replace_row":10000,"current_replace_table_finish":true,"last_msg":"Importing sql file table: tmp5077fc_postmeta Replaced row: 30000\/34335;"}
+[2026-07-01 10:13:43][notice]
+[2026-07-01 10:13:43][notice]UPDATE tmp5077fc_options SET option_value="http://localhost:8888" WHERE option_name="siteurl";
+[2026-07-01 10:13:43][notice]update query len:94
+[2026-07-01 10:13:43][notice]UPDATE tmp5077fc_options SET option_value="http://localhost:8888" WHERE option_name="home";
+[2026-07-01 10:13:43][notice]update query len:91
+[2026-07-01 10:13:43][notice]Restore db success
+[2026-07-01 10:13:43][notice]End restore databases.
+[2026-07-01 10:13:44][notice]Restore db success,now start rename temp table name prefix to new site prefix.
+[2026-07-01 10:13:44][notice]DROP TABLE IF EXISTS wp_commentmeta
+[2026-07-01 10:13:44][notice]DROP TABLE IF EXISTS wp_comments
+[2026-07-01 10:13:44][notice]DROP TABLE IF EXISTS wp_links
+[2026-07-01 10:13:44][notice]DROP TABLE IF EXISTS wp_options
+[2026-07-01 10:13:44][notice]DROP TABLE IF EXISTS wp_postmeta
+[2026-07-01 10:13:44][notice]DROP TABLE IF EXISTS wp_posts
+[2026-07-01 10:13:44][notice]DROP TABLE IF EXISTS wp_term_relationships
+[2026-07-01 10:13:44][notice]DROP TABLE IF EXISTS wp_term_taxonomy
+[2026-07-01 10:13:44][notice]DROP TABLE IF EXISTS wp_termmeta
+[2026-07-01 10:13:44][notice]DROP TABLE IF EXISTS wp_terms
+[2026-07-01 10:13:44][notice]DROP TABLE IF EXISTS wp_usermeta
+[2026-07-01 10:13:44][notice]DROP TABLE IF EXISTS wp_users
+[2026-07-01 10:13:44][notice]RENAME TABLE tmp5077fc_commentmeta TO wp_commentmeta
+[2026-07-01 10:13:44][notice]RENAME TABLE tmp5077fc_comments TO wp_comments
+[2026-07-01 10:13:44][notice]RENAME TABLE tmp5077fc_links TO wp_links
+[2026-07-01 10:13:44][notice]RENAME TABLE tmp5077fc_options TO wp_options
+[2026-07-01 10:13:44][notice]RENAME TABLE tmp5077fc_postmeta TO wp_postmeta
+[2026-07-01 10:13:44][notice]RENAME TABLE tmp5077fc_posts TO wp_posts
+[2026-07-01 10:13:44][notice]RENAME TABLE tmp5077fc_term_relationships TO wp_term_relationships
+[2026-07-01 10:13:44][notice]RENAME TABLE tmp5077fc_term_taxonomy TO wp_term_taxonomy
+[2026-07-01 10:13:44][notice]RENAME TABLE tmp5077fc_termmeta TO wp_termmeta
+[2026-07-01 10:13:44][notice]RENAME TABLE tmp5077fc_terms TO wp_terms
+[2026-07-01 10:13:44][notice]RENAME TABLE tmp5077fc_usermeta TO wp_usermeta
+[2026-07-01 10:13:44][notice]RENAME TABLE tmp5077fc_users TO wp_users
+[2026-07-01 10:13:44][notice]Replacing table prefix succeeded.
+[2026-07-01 10:13:44][notice]Delete migration option failed.
+[2026-07-01 10:13:44][notice]Deleting temp files.
