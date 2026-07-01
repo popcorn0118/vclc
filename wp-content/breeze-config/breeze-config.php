@@ -1,7 +1,7 @@
 <?php 
 defined( 'ABSPATH' ) || exit;
 return array (
-  'homepage' => 'https://woocommerce-1264690-5911740.cloudwaysapps.com',
+  'homepage' => 'http://localhost:8888',
   'cache_options' => 
   array (
     'breeze-active' => '1',
@@ -79,13 +79,6 @@
   ),
   'wp-user-roles' => 
   array (
-    0 => 'administrator',
-    1 => 'editor',
-    2 => 'author',
-    3 => 'contributor',
-    4 => 'subscriber',
-    5 => 'customer',
-    6 => 'shop_manager',
   ),
   'enabled-lazy-load' => '0',
   'use-lazy-load-native' => '0',
