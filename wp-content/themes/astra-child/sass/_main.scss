@@ -10,13 +10,50 @@
 .h5 {
     font-size: 16px;
 }
+.decorate-text .elementor-heading-title {
+    font-size: clamp(64px, 13vw, 200px);
+    white-space: nowrap;
+}
+
 .btn {
-    i {
-        transform: scale(1.5); 
+    .elementor-button-icon > i {
+        transform: scale(1.7); 
         margin-right: 8px;
     }
 }
+.w100 {
+    .elementor-button {
+        width: 100%;
+    }
+}
 
+.no-br-desk {
+    @media (min-width: $md) {
+        br {
+            display: none;
+        }
+    }
+}
+.no-br-mobile {
+    @include md() {
+        br {
+            display: none;
+        }
+    }
+}
+.opacity-8 {
+   opacity: 0.8; 
+}
+
+
+
+// header
+.site-logo-img img {
+    filter: unset !important;
+}
+// .site-logo-img img {
+//     filter: url(#ast-img-color-filter-2) !important;
+// }
 
 
 // footer
@@ -55,6 +92,7 @@ footer {
         position: fixed;
         right: 30px;
         bottom: 27vh;
+        z-index: 999;
         .elementor-button {
             font-weight: 400;
             display: flex;
@@ -65,7 +103,7 @@ footer {
         }
         @include md() {
             right: 16px;
-            bottom: 10vh;
+            bottom: 12vh;
             .elementor-button {
                 width: 80px;
                 height: 80px;
