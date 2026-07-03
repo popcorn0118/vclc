@@ -57,9 +57,9 @@ if ( ! $q->have_posts() ) {
                             ?>
                         </div>
 
-                        <a class="news__link" href="<?php the_permalink(); ?>">
+                        <!-- <a class="news__link" href="<?php //the_permalink(); ?>">
                             Read more...
-                        </a>
+                        </a> -->
                     </div>
 
                 </article>

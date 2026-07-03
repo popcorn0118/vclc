@@ -45,6 +45,39 @@
    opacity: 0.8; 
 }
 
+// slick
+.slick-dots {
+    margin-top: 32px;
+    bottom: -38px;
+    display: flex;
+    li {
+        width: 10px;
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:before {
+                content: '';
+                width: 4px;
+                height: 4px;
+                display: block;
+                background-color: #D9D9D9;
+                border-radius: 100%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        &.slick-active {
+            button {
+                &:before {
+                    background-color: $primary;
+                }
+            }
+        }
+    }
+}
+
 
 
 // header
