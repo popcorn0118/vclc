@@ -10,6 +10,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: astra-child
 Template: astra
 */
+:root {
+  --content-width: 1200px !important;
+}
+
 .h4 {
   font-size: 20px;
 }

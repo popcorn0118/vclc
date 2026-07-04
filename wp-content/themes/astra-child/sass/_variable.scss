@@ -11,6 +11,9 @@
 //     // --bg: var( --e-global-color-astglobalcolor4 );
 
 // }
+:root {
+    --content-width: 1200px !important;
+}
 
 $primary: #AA5858;
 $second: #762121;

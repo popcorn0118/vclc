@@ -42,3 +42,48 @@ add_shortcode('copyright', function () {
             '<a href="https://eoscreative.co/" target="_blank">Eos Creative Ltd.,</a>' .
         '</small>';
 });
+
+
+// 客製化 post type
+function create_post_type() {
+	register_post_type( 'service',
+		array(
+			'labels' 				=> array(
+				'name' 				=> __( '服務項目' ),
+				'singular_name' 	=> __( '服務項目' )
+			),
+			'public' 				=> true,
+			'has_archive' 			=> true,
+			'menu_icon' 			=> 'dashicons-groups',
+			'supports' 				=> array('title', 'editor', 'thumbnail', 'excerpt', 'revisions'),
+			'taxonomies' 			=> array('service-type', 'service-tag'),
+			'capability_type' 		=> 'page',
+			'map_meta_cap'			=> true,
+			// 'show_in_rest'      	=> true, // To use Gutenberg editor.
+		)
+	);
+
+	flush_rewrite_rules();
+}
+add_action( 'init', 'create_post_type' );
+
+// 新增 Taxonomy 給客製化的 post type
+function create_custom_taxonomy() {
+	  
+	// 分類
+	register_taxonomy('service-type', array('service'), 
+		array(
+			'labels' 				=> array(
+			'name' 				=> __( '服務項目分類' ),
+			'singular_name' 	=> __( '服務項目分類' )
+		),
+		'show_ui' 				=> true,
+		'show_admin_column' 	=> true,
+		'query_var' 			=> true,
+		'hierarchical' 			=> true,
+		'rewrite' 				=> array( 'slug' => 'service-type' ),
+		)
+	);
+
+}
+add_action( 'init', 'create_custom_taxonomy', 0 );
