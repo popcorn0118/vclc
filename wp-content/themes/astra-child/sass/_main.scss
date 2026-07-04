@@ -66,6 +66,7 @@
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
+                opacity: 1;
             }
         }
         &.slick-active {
@@ -75,6 +76,53 @@
                 }
             }
         }
+    }
+}
+.slick-arrow {
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    top: -60px;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    border-radius: 50%;
+    font-size: 0;
+    z-index: 10;
+    transition: .3s;
+    transform: translateY(-50%);
+    background: $primary;
+    padding: 0;
+    &::before {
+        content:'';
+        display:block;
+        width:8px;
+        height:8px;
+        margin:auto;
+        border-top:2px solid #fff;
+        border-right:2px solid #fff;
+    }
+    &:hover, &.slick-disabled {
+        background: rgba($primary, 0.6);
+    }
+    &.slick-disabled {
+        cursor: context-menu;
+    }
+}
+
+.slick-prev { 
+    right: 85px;   
+    &::before {
+        transform:rotate(-135deg);
+    }
+}
+
+.slick-next {
+    right: 20px;
+    &::before {
+        transform:rotate(45deg);
     }
 }
 

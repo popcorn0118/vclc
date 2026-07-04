@@ -135,9 +135,7 @@
         }
     }
 
-    .slick-dots {
-        margin-top: 32px;
-    }
+   
 
     // @media (max-width: 1024px) {
     //     .news__slider {
@@ -164,7 +162,7 @@
 .home-services {
 
     .services__slider {
-        margin: 0 -20px;
+        margin: 0 -5px;
 
         .slick-track {
             display: flex;
@@ -178,16 +176,31 @@
         }
     }
     .services__card {
-        margin: 0 20px;
+        margin: 0 5px;
+        padding: 5px;
         height: 100%;
         display: flex;
         flex-direction: column;
         gap: 24px;
+        
+        .services__warp {
+            box-shadow: 2px 4px 4px  rgba($text-d, 0.05);
+            background-color: $bg;
+            border-radius: 20px;
+            overflow: hidden;
+        }
     }
     .services__thumb {
-        overflow: hidden;
-        border-radius: 4px;
-        box-shadow: 4px 10px 20px rgba($text-d, 0.08);
+        position: relative;
+        &::after {
+            content: '';
+            @include bgGradient(rgba($bg, 0), $bg);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+        }
     }
     .services__img {
         display: block;
@@ -198,22 +211,73 @@
     .services__body {
         display: flex;
         flex-direction: column;
-        gap: 8px;
+        gap: 15px;
+        padding: 30px 20px;
         .services__card-title {
-            @include word-count(2);
-            color: $text;
-            font-size: 18px;
+            color: $primary;
+            font-size: 20px;
             font-weight: 500;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 14px;
+            border-bottom: 1px solid rgba($text-d, 0.08);
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            .services__icon {
+                width: 30px;
+            }
+        }
+        .services__sub-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: $text;
         }
         .services__excerpt {
-            @include word-count(3);
-            font-size: 14px;
+            font-size: 16px;
             color: $texl-l;
+            font-weight: 300;
+            @include md() {
+                font-size: 14px;
+            }
+        }
+        .services__link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid $primary;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: 400;
+            color: $primary;
+            min-height: 49px;
+            padding: 10px 26px;
+            &::after {
+                content: '';
+                width: 8px;
+                height: 8px;
+                border-top: 1px solid $primary;
+                border-right: 1px solid $primary;
+                display: inline-block;
+                transform: rotate(45deg);
+                margin-left: 10px;
+            }
+            &:hover {
+                color: $text-w;
+                background-color: $primary;
+                &::after {
+                    border-top-color: $text-w;
+                    border-right-color: $text-w;
+                }
+            }
         }
     }
 
     .slick-dots {
-        margin-top: 32px;
+        padding: 0 20px;
+        @include sm() {
+            padding: 0;
+        }
     }
 
     // @media (max-width: 1024px) {

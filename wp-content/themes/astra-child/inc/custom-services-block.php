@@ -37,79 +37,62 @@ if ( ! $q->have_posts() ) {
                 ?>
 
                 <article class="services__card">
-
-                    <div class="services__thumb">
-                        <?php if ( has_post_thumbnail() ) : ?>
-                            <?php the_post_thumbnail( 'large', [
-                                'class'    => 'services__img',
-                                'loading'  => 'lazy',
-                                'decoding' => 'async',
-                            ] ); ?>
-                        <?php else : ?>
-                            <div class="services__img-placeholder" aria-hidden="true"></div>
-                        <?php endif; ?>
-                    </div>
-
-                    <div class="services__body">
-
-                        <?php if ( $icon || $title_sub ) : ?>
-                            <div class="services__head">
-
-                                <?php if ( $icon ) : ?>
-                                    <div class="services__icon">
-                                        <?php
-                                        if ( is_array( $icon ) ) {
-                                            echo wp_get_attachment_image(
-                                                $icon['ID'],
-                                                'full',
-                                                false,
-                                                [
-                                                    'loading'  => 'lazy',
-                                                    'decoding' => 'async',
-                                                ]
-                                            );
-                                        } else {
-                                            echo wp_get_attachment_image(
-                                                $icon,
-                                                'full',
-                                                false,
-                                                [
-                                                    'loading'  => 'lazy',
-                                                    'decoding' => 'async',
-                                                ]
-                                            );
-                                        }
-                                        ?>
-                                    </div>
-                                <?php endif; ?>
-
-                                <?php if ( $title_sub ) : ?>
-                                    <div class="services__sub-title">
-                                        <?php echo esc_html( $title_sub ); ?>
-                                    </div>
-                                <?php endif; ?>
-
-                            </div>
-                        <?php endif; ?>
-
-                        <div class="services__card-title"><?php the_title(); ?></div>
-
-                        <div class="services__excerpt">
-                            <?php
-                            $excerpt = has_excerpt()
-                                ? get_the_excerpt()
-                                : wp_trim_words( wp_strip_all_tags( get_the_content() ), 200, '' );
-
-                            echo esc_html( $excerpt );
-                            ?>
+                    <div class="services__warp">
+                        <div class="services__thumb">
+                            <?php if ( has_post_thumbnail() ) : ?>
+                                <?php the_post_thumbnail( 'large', [
+                                    'class'    => 'services__img',
+                                    'loading'  => 'lazy',
+                                    'decoding' => 'async',
+                                ] ); ?>
+                            <?php else : ?>
+                                <div class="services__img-placeholder" aria-hidden="true"></div>
+                            <?php endif; ?>
                         </div>
 
-                        <a class="services__link" href="<?php //the_permalink(); ?>">
-                            詳細說明
-                        </a>
+                        <div class="services__body">
 
+                            <?php if ( $icon || $title_sub ) : ?>
+                                <div class="services__head">
+
+                                    <div class="services__card-title">
+                                        <div class="services__icon">
+                                            <?php
+                                                echo wp_get_attachment_image(
+                                                    $icon['ID'],
+                                                    'full',
+                                                    false,
+                                                    [
+                                                        'loading'  => 'lazy',
+                                                        'decoding' => 'async',
+                                                    ]
+                                                );
+                                            ?>
+                                        </div>
+                                        <?php the_title(); ?>
+                                    </div>
+
+                                    <?php if ( $title_sub ) : ?>
+                                        <div class="services__sub-title">
+                                            <?php echo esc_html( $title_sub ); ?>
+                                        </div>
+                                    <?php endif; ?>
+
+                                </div>
+                            <?php endif; ?>
+
+                            
+
+                            <div class="services__excerpt">
+                                 <?php echo wp_kses_post( get_the_excerpt() ); ?>
+                            </div>
+
+                            <a class="services__link" href="<?php //the_permalink(); ?>">
+                                詳細說明
+                            </a>
+
+                        </div>
                     </div>
-
                 </article>
 
             <?php endwhile; ?>

@@ -14,8 +14,8 @@ jQuery(window).on('load', function () {
         slidesToShow: 3,
         slidesToScroll: 1,
         arrows: false,
-        dots: true,
-        infinite: true,
+        dots: false,
+        infinite: false,
         adaptiveHeight: false,
         responsive: [
             {
@@ -27,19 +27,18 @@ jQuery(window).on('load', function () {
             {
                 breakpoint: 576,
                 settings: {
-                    slidesToShow: 1
+                    slidesToShow: 1,
+                    dots: true,
                 }
             }
         ]
     });
 
-});
+
 
 /* =================================
    首頁服務項目
  * ================================== */
-
-jQuery(window).on('load', function () {
 
     const $servicesSlider = jQuery('.js-services-slider');
 
@@ -50,9 +49,9 @@ jQuery(window).on('load', function () {
     $servicesSlider.slick({
         slidesToShow: 3,
         slidesToScroll: 1,
-        arrows: false,
-        dots: true,
-        infinite: true,
+        arrows: true,
+        dots: false,
+        infinite: false,
         adaptiveHeight: false,
         responsive: [
             {
@@ -62,9 +61,19 @@ jQuery(window).on('load', function () {
                 }
             },
             {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    dots: true,
+                    arrows: false,
+                }
+            },
+            {
                 breakpoint: 576,
                 settings: {
-                    slidesToShow: 1
+                    slidesToShow: 1,
+                    dots: true,
+                    arrows: false,
                 }
             }
         ]
