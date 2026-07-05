@@ -160,6 +160,34 @@
 
 // 服務項目
 .home-services {
+    .services__card {
+        .services__thumb {
+            position: relative;
+            &::after {
+                content: '';
+                @include bgGradient(rgba($bg, 0), $bg);
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+            }
+        }
+        .services__img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 373.33 / 280;
+            object-fit: cover;
+        }
+        .services__body {
+            .services__card-title {
+                justify-content: center;
+                @include md() {
+                    justify-content: start;
+                }
+            }
+        }
+    }
     .services__slider {
         margin: 0 -5px;
 
