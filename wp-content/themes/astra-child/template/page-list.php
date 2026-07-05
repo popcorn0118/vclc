@@ -6,11 +6,6 @@
 
 get_header();
 
-// 精選圖 URL
-$featured_image_url = get_the_post_thumbnail_url( get_the_ID(), 'full' );
-// slug
-$post_slug = get_post_field( 'post_name', get_the_ID() );
-
 // 依頁面 slug 設定
 $slug = get_post_field('post_name', get_queried_object_id());
 $map  = [
@@ -43,17 +38,11 @@ $q = new WP_Query([
   'order'          => 'DESC',
 ]);
 ?>
- 
- <section class="page-hero" <?php echo $featured_image_url ? 'style="background-image:url(' . esc_url( $featured_image_url ) . ')"' : ''; ?>>
-  <div class="ph-container">
-    <?php if ( $post_slug ) : ?>
-      <h4 class="page-subtitle"><?php echo esc_html( $post_slug ); ?></h4>
-    <?php endif; ?>
-    <h1 class="page-title"><?php echo esc_html( get_the_title() ); ?></h1>
-  </div>
-</section>
+
 
 <main class="page-main list-<?php echo esc_attr($slug) ?>">
+  <?php echo apply_filters( 'the_content', get_the_content( null, false, get_the_ID() ) ); ?>
+
   <div class="ph-container list-layout">
     <div class="content-col">
       <?php if ($q->have_posts()) : ?>

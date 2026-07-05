@@ -41,56 +41,6 @@ $tax_map = [
 $cfg_tax = $tax_map[$post_type] ?? $tax_map['post'];
 
 /** ─────────────────────────────────────────────────────────
- * 取得精選圖
- * ───────────────────────────────────────────────────────── */
-
-// 取得目前 archive 的 post_type（可能是字串或陣列）
-$post_type = get_query_var('post_type');
-if ( empty($post_type) ) {
-  $post_type = get_post_type(); // fallback
-}
-if ( is_array($post_type) ) {
-  $post_type = reset($post_type);
-}
-$post_type = $post_type ?: 'post';
-
-// 找到對應頁面（用 slug 找 page）
-$page_slug = $slug_map[$post_type] ?? '';
-$slug_page = $page_slug ? get_page_by_path($page_slug) : null;
-
-// 背景圖：抓該頁面的精選圖
-$featured_image_url = ($slug_page)
-  ? get_the_post_thumbnail_url($slug_page->ID, 'full')
-  : '';
-
-
-/** ─────────────────────────────────────────────────────────
- * Archive Title 與前綴（分類 / 標籤）
- * ───────────────────────────────────────────────────────── */
-if (is_category()) {
-  $archive_title = single_cat_title('', false);
-} elseif (is_tag()) {
-  $archive_title = single_tag_title('', false);
-} elseif (is_tax()) {
-  $archive_title = single_term_title('', false);
-} elseif (is_post_type_archive()) {
-  $archive_title = post_type_archive_title('', false);
-} elseif (is_author()) {
-  $archive_title = get_the_author();
-} elseif (is_date()) {
-  $archive_title = get_the_date(get_option('date_format'));
-} else {
-  $archive_title = wp_strip_all_tags(get_the_archive_title());
-}
-
-$prefix = '';
-if (is_category() || (is_tax() && is_tax($cfg_tax['tax_cat']))) {
-  $prefix = '分類：';
-} elseif (is_tag() || (is_tax() && is_tax($cfg_tax['tax_tag']))) {
-  $prefix = '標籤：';
-}
-
-/** ─────────────────────────────────────────────────────────
  * 組裝 archive class（給版型/樣式掛鉤）
  * ───────────────────────────────────────────────────────── */
 $archive_classes = ['is-archive', 'post-type-' . sanitize_html_class($post_type)];
@@ -106,26 +56,7 @@ if (!empty($qo->taxonomy)) $archive_classes[] = 'tax-' . sanitize_html_class($qo
 if (!empty($qo->slug))     $archive_classes[] = 'term-' . sanitize_html_class($qo->slug);
 
 $archive_class_str = implode(' ', array_unique($archive_classes));
-
-/** ─────────────────────────────────────────────────────────
- * 代稱 Page（提供「返回 XXX」用）
- * ───────────────────────────────────────────────────────── */
-$slug_page = get_page_by_path($slug);
 ?>
-
-<section class="page-hero" <?php echo $featured_image_url ? 'style="background-image:url(' . esc_url( $featured_image_url ) . ')"' : ''; ?>>
-  <div class="ph-container">
-    <h4 class="page-subtitle">
-      <?php if ($slug_page): ?>
-        <a href="<?php echo esc_url(get_permalink($slug_page->ID)); ?>">
-          返回<?php echo esc_html(get_the_title($slug_page->ID)); ?>
-        </a>
-      <?php endif; ?>
-    </h4>
-    <h1 class="page-title"><?php echo esc_html($prefix . $archive_title); ?></h1>
-  </div>
-</section>
-
 
 <main class="page-main list-<?php echo esc_attr($slug); ?> <?php echo esc_attr($archive_class_str); ?>">
   <div class="ph-container list-layout">
