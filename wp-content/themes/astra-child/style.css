@@ -529,8 +529,8 @@ body.page-id-5 #ast-hf-menu-1 .menu-item.current-menu-item .menu-link {
   gap: 50px;
 }
 .services-list .services-list__tabs {
-  display: flex;
-  flex-wrap: nowrap;
+  display: none;
+  flex-wrap: wrap;
   border-bottom: 1px solid rgba(26, 26, 26, 0.1);
   gap: 8px;
 }
