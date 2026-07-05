@@ -1,0 +1,102 @@
+@use 'variable' as *;
+@use 'mixin' as *;
+
+
+// 服務項目卡片
+ .services__card {
+        margin: 0 5px;
+        padding: 5px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        
+        .services__warp {
+            box-shadow: 2px 4px 4px  rgba($text-d, 0.05);
+            background-color: $bg;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+    }
+    .services__thumb {
+        position: relative;
+        &::after {
+            content: '';
+            @include bgGradient(rgba($bg, 0), $bg);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+        }
+    }
+    .services__img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 373.33 / 280;
+        object-fit: cover;
+    }
+    .services__body {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 30px 20px;
+        .services__card-title {
+            color: $primary;
+            font-size: 20px;
+            font-weight: 500;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 14px;
+            border-bottom: 1px solid rgba($text-d, 0.08);
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            .services__icon {
+                width: 30px;
+            }
+        }
+        .services__sub-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: $text;
+        }
+        .services__excerpt {
+            font-size: 16px;
+            color: $texl-l;
+            font-weight: 300;
+            @include md() {
+                font-size: 14px;
+            }
+        }
+        .services__link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid $primary;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: 400;
+            color: $primary;
+            min-height: 49px;
+            padding: 10px 26px;
+            &::after {
+                content: '';
+                width: 8px;
+                height: 8px;
+                border-top: 1px solid $primary;
+                border-right: 1px solid $primary;
+                display: inline-block;
+                transform: rotate(45deg);
+                margin-left: 10px;
+            }
+            &:hover {
+                color: $text-w;
+                background-color: $primary;
+                &::after {
+                    border-top-color: $text-w;
+                    border-right-color: $text-w;
+                }
+            }
+        }
+    }

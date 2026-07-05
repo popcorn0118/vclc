@@ -1,0 +1,9 @@
+@use 'variable' as *;
+@use 'mixin' as *;
+
+.location-map {
+    iframe {
+            height: auto !important;
+            aspect-ratio: 378 / 282;
+    }
+}
