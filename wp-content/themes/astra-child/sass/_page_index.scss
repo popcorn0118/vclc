@@ -161,6 +161,7 @@
 // 服務項目
 .home-services {
     .services__card {
+        padding: 5px;
         .services__thumb {
             position: relative;
             &::after {
@@ -180,10 +181,16 @@
             object-fit: cover;
         }
         .services__body {
+            gap: 15px;
+            padding: 30px 20px;
             .services__card-title {
                 justify-content: center;
+                padding-bottom: 20px;
+                margin-bottom: 20px;
                 @include md() {
                     justify-content: start;
+                    padding-bottom: 10px;
+                    margin-bottom: 10px;
                 }
             }
         }

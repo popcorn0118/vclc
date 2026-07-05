@@ -5,7 +5,6 @@
 // 服務項目卡片
  .services__card {
         margin: 0 5px;
-        padding: 5px;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -24,14 +23,14 @@
     .services__img {
         display: block;
         width: 100%;
-        aspect-ratio: 373.33 / 280;
+        aspect-ratio: 576 / 244;
         object-fit: cover;
     }
     .services__body {
         display: flex;
         flex-direction: column;
-        gap: 15px;
-        padding: 30px 20px;
+        gap: 10px;
+        padding: 20px 20px;
         @include md() {
             gap: 6px;
         }
@@ -44,12 +43,9 @@
             align-items: center;
             gap: 14px;
             border-bottom: 1px solid rgba($text-d, 0.08);
-            padding-bottom: 20px;
-            margin-bottom: 20px;
-            @include md() {
-                padding-bottom: 10px;
-                margin-bottom: 10px;
-            }
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+
             .services__icon {
                 width: 30px;
             }
@@ -109,37 +105,37 @@
 .services-list {
     scroll-margin-top: 100px; // 切換分類/分頁後，錨點捲動時預留固定選單高度
 
-    &__container {
+    .services-list__container {
         display: flex;
         flex-direction: column;
-        gap: 40px;
+        gap: 50px;
     }
 
     // 分類頁籤
-    &__tabs {
+    .services-list__tabs {
         display: flex;
         flex-wrap: nowrap;
-        overflow-x: auto;
-        border-bottom: 1px solid rgba($text-d, 0.1);
+        border-bottom: 1px solid rgba($text, 0.1);
+        gap: 8px;
         @include sm() {
             gap: 4px;
         }
     }
 
-    &__tab {
+    .services-list__tab {
         flex: none;
-        padding: 14px 28px;
-        font-size: 16px;
+        padding: 16px 36px;
+        font-size: 24px;
         font-weight: 500;
-        color: $texl-l;
+        color: rgba($texl-l, 0.8);
         white-space: nowrap;
-        border: 1px solid transparent;
-        border-bottom: none;
-        border-radius: 12px 12px 0 0;
+        border: 1px solid #F0F0F0;
+        border-radius: 8px 8px 0 0;
         margin-bottom: -1px;
+        background-color: #E8E8E8;
         @include md() {
             padding: 12px 18px;
-            font-size: 14px;
+            font-size: 20px;
         }
 
         &:hover {
@@ -151,18 +147,18 @@
             font-weight: 700;
             background-color: $bg;
             border-color: rgba($text-d, 0.1);
-            border-bottom-color: $bg;
         }
     }
 
     // 卡片列表
-    &__grid {
+    .services-list__grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 40px 24px;
+        gap: 50px;
+
         @include sm() {
             grid-template-columns: 1fr;
-            gap: 24px;
+            gap: 40px;
         }
 
         .services__card {
@@ -170,33 +166,33 @@
         }
     }
 
-    &__empty {
+    .services-list__empty {
         text-align: center;
         color: $texl-l;
         padding: 60px 0;
     }
 
     // 分頁
-    &__pagination {
+    .services-list__pagination {
         display: flex;
-        justify-content: center;
+        justify-content: start;
         align-items: center;
-        gap: 12px;
-
+        gap: 32px;
+        margin-top: 30px;
         .page-numbers {
             display: flex;
             justify-content: center;
             align-items: center;
-            min-width: 36px;
-            height: 36px;
+            min-width: 48px;
+            height: 48px;
             padding: 0 4px;
-            font-size: 16px;
-            color: $text;
+            font-size: 20px;
+            color: $primary;
 
             &.current {
                 color: $text-w;
                 background-color: $primary;
-                border-radius: 50%;
+                border-radius: 4px;
             }
 
             &:not(.current):not(.dots):hover {
