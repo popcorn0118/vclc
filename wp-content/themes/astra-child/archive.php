@@ -29,7 +29,7 @@ if (is_post_type_archive()) {
  * 對齊 page-list.php 的代稱（slug）與 taxonomy 設定
  * ───────────────────────────────────────────────────────── */
 $slug_map = [
-  'post' => 'news',
+  'post' => 'article',
   // 'case' => 'cases',
 ];
 $slug = $slug_map[$post_type] ?? sanitize_html_class($post_type);
@@ -113,7 +113,8 @@ $archive_class_str = implode(' ', array_unique($archive_classes));
 $slug_page = get_page_by_path($slug);
 ?>
 
-<section class="page-hero" <?php echo $featured_image_url ? 'style="background-image:url(' . esc_url( $featured_image_url ) . ')"' : ''; ?>>
+<section class="page-hero">
+  <div class="page-image" <?php echo $featured_image_url ? 'style="background-image:url(' . esc_url( $featured_image_url ) . ')"' : ''; ?>></div>
   <div class="ph-container">
     <h4 class="page-subtitle">
       <?php if ($slug_page): ?>

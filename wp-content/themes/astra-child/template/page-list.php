@@ -44,10 +44,11 @@ $q = new WP_Query([
 ]);
 ?>
  
- <section class="page-hero" <?php echo $featured_image_url ? 'style="background-image:url(' . esc_url( $featured_image_url ) . ')"' : ''; ?>>
+ <section class="page-hero">
+  <div class="page-image" <?php echo $featured_image_url ? 'style="background-image:url(' . esc_url( $featured_image_url ) . ')"' : ''; ?>></div> 
   <div class="ph-container">
     <?php if ( $post_slug ) : ?>
-      <h4 class="page-subtitle"><?php echo esc_html( $post_slug ); ?></h4>
+      <!-- <h4 class="page-subtitle"><?php //echo esc_html( $post_slug ); ?></h4> -->
     <?php endif; ?>
     <h1 class="page-title"><?php echo esc_html( get_the_title() ); ?></h1>
   </div>

@@ -57,7 +57,7 @@
         }
         .services__excerpt {
             font-size: 16px;
-            color: $texl-l;
+            color: $text-l;
             font-weight: 300;
             @include md() {
                 font-size: 14px;
@@ -128,7 +128,7 @@
         padding: 16px 36px;
         font-size: 24px;
         font-weight: 500;
-        color: rgba($texl-l, 0.8);
+        color: rgba($text-l, 0.8);
         white-space: nowrap;
         border: 1px solid #F0F0F0;
         border-radius: 8px 8px 0 0;
@@ -169,7 +169,7 @@
 
     .services-list__empty {
         text-align: center;
-        color: $texl-l;
+        color: $text-l;
         padding: 60px 0;
     }
 
@@ -207,7 +207,7 @@
             }
 
             &.dots {
-                color: $texl-l;
+                color: $text-l;
             }
         }
     }

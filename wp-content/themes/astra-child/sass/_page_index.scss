@@ -131,7 +131,7 @@
         .news__excerpt {
             @include word-count(3);
             font-size: 14px;
-            color: $texl-l;
+            color: $text-l;
         }
     }
 
