@@ -2,10 +2,8 @@
 /**
  * Archive (Category/Tag/Tax/CPT Archive)
  * 與 page-list.php 結構一致；僅「加上」archive 相關 class 與 Banner 邏輯。
+ * 僅套用於「文章」(post)；其他 post type（如自訂 service）一律 fallback 回 Astra 預設 archive 樣板。
  */
-
-get_header();
-
 
 /** ─────────────────────────────────────────────────────────
  * 基本物件與 post_type 判定（先決定 post_type，後面才用得到）
@@ -24,6 +22,13 @@ if (is_post_type_archive()) {
     }
   }
 }
+
+if ($post_type !== 'post') {
+  include get_parent_theme_file_path('archive.php');
+  return;
+}
+
+get_header();
 
 /** ─────────────────────────────────────────────────────────
  * 對齊 page-list.php 的代稱（slug）與 taxonomy 設定
