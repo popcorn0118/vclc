@@ -23,3 +23,11 @@ body.page-id-5 {
     }
    
 }
+
+.about-mission-vision {
+    @include md() {
+        * {
+            color: $text;
+        }
+    }
+}

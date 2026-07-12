@@ -465,6 +465,12 @@ body.page-id-5 #ast-hf-menu-1 .menu-item.current-menu-item .menu-link {
   color: #7D0000;
 }
 
+@media screen and (max-width: 767px) {
+  .about-mission-vision * {
+    color: #1A1A1A;
+  }
+}
+
 .location-map iframe {
   height: auto !important;
   aspect-ratio: 378/282;
