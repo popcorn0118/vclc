@@ -31,37 +31,35 @@ if ( ! $q->have_posts() ) {
         <div class="news__slider js-news-slider">
             <?php while ( $q->have_posts() ) : $q->the_post(); ?>
                 <article class="news__card">
+                    <a class="news__card-link" href="<?php the_permalink(); ?>">
 
-                    <div class="news__thumb">
-                        <?php if ( has_post_thumbnail() ) : ?>
-                            <?php the_post_thumbnail( 'large', [
-                                'class'    => 'news__img',
-                                'loading'  => 'lazy',
-                                'decoding' => 'async',
-                            ] ); ?>
-                        <?php else : ?>
-                            <div class="news__img-placeholder" aria-hidden="true"></div>
-                        <?php endif; ?>
-                    </div>
-
-                    <div class="news__body">
-                        <div class="news__card-title"><?php the_title(); ?></div>
-
-                        <div class="news__excerpt">
-                            <?php
-                            $excerpt = has_excerpt()
-                                ? get_the_excerpt()
-                                : wp_trim_words( wp_strip_all_tags( get_the_content() ), 200, '' );
-
-                            echo esc_html( $excerpt );
-                            ?>
+                        <div class="news__thumb">
+                            <?php if ( has_post_thumbnail() ) : ?>
+                                <?php the_post_thumbnail( 'large', [
+                                    'class'    => 'news__img',
+                                    'loading'  => 'lazy',
+                                    'decoding' => 'async',
+                                ] ); ?>
+                            <?php else : ?>
+                                <div class="news__img-placeholder" aria-hidden="true"></div>
+                            <?php endif; ?>
                         </div>
 
-                        <!-- <a class="news__link" href="<?php //the_permalink(); ?>">
-                            Read more...
-                        </a> -->
-                    </div>
+                        <div class="news__body">
+                            <div class="news__card-title"><?php the_title(); ?></div>
 
+                            <div class="news__excerpt">
+                                <?php
+                                $excerpt = has_excerpt()
+                                    ? get_the_excerpt()
+                                    : wp_trim_words( wp_strip_all_tags( get_the_content() ), 200, '' );
+
+                                echo esc_html( $excerpt );
+                                ?>
+                            </div>
+                        </div>
+
+                    </a>
                 </article>
             <?php endwhile; ?>
         </div>

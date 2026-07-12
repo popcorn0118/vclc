@@ -48,7 +48,7 @@
 .process-txt {
     position: relative;
     >.elementor-widget-container {
-         position: absolute;
+        position: absolute;
         top: 0;
         right: 0;
         writing-mode: vertical-rl;
@@ -103,9 +103,20 @@
     .news__card {
         margin: 0 20px;
         height: 100%;
+        transform:  color 0.4s;
+        &:hover {
+            .news__card-title {
+                color: $acc
+            }
+        }
+    }
+    .news__card-link {
         display: flex;
         flex-direction: column;
         gap: 24px;
+        height: 100%;
+        color: inherit;
+        text-decoration: none;
     }
     .news__thumb {
         overflow: hidden;
@@ -162,6 +173,9 @@
 .home-services {
     .services__card {
         padding: 5px;
+        .services__warp {
+            // transform: translateZ(0);
+        }
         .services__thumb {
             position: relative;
             &::after {
@@ -169,7 +183,7 @@
                 @include bgGradient(rgba($bg, 0), $bg);
                 position: absolute;
                 width: 100%;
-                height: 100%;
+                height: 101%;
                 left: 0;
                 top: 0;
             }

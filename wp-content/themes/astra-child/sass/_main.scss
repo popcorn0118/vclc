@@ -52,6 +52,7 @@
     display: flex;
     li {
         width: 10px;
+        margin: 0 2px;
         button {
             display: flex;
             justify-content: center;
@@ -132,7 +133,52 @@
 .site-logo-img img {
     filter: unset !important;
 }
+.main-header-menu, .sub-menu {
+    > li > a {
+        font-size: 16px !important;
+    } 
+}
+@include ml() {
+    .ast-mobile-popup-header {
+        justify-content: start !important;
+    }
+    .ast-menu-toggle {
+        path {
+            fill: $text;
+        }
+    }
+    .menu-toggle-close {
+        svg {
+            width: 30px;
+            height: 30px;
+        }
+        path {
+            fill: #707070;
+        }
+    }
+    .ast-menu-toggle {
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+    }
+}
 
+
+.sub-menu {
+     > li > a {
+        .ast-icon {
+            display: none !important;
+        }
+    } 
+    @media (min-width: $ml) {
+       // visibility:visible !important;
+        // left: 0 !important;
+        transform: translateX(-25%);
+        > li > a {
+            text-align: center;
+        } 
+    }
+    
+}
 
 
 // footer
@@ -170,7 +216,8 @@ footer {
     .floating-consult-btn {
         position: fixed;
         right: 30px;
-        bottom: 27vh;
+        bottom: 40vh;
+        transform: translateY(120%);
         z-index: 999;
         .elementor-button {
             font-weight: 400;
@@ -182,10 +229,15 @@ footer {
         }
         @include md() {
             right: 16px;
-            bottom: 12vh;
+            bottom: 25vh;
             .elementor-button {
                 width: 80px;
                 height: 80px;
+                .elementor-button-text {
+                    font-size: 14px;
+                    letter-spacing: 1px;
+                    line-height: 1.8;
+                }
             }
         }
     }

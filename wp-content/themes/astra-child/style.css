@@ -17,7 +17,7 @@ Template: astra
 .h4 {
   font-size: 20px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .h4 {
     font-size: 16px;
   }
@@ -41,13 +41,13 @@ Template: astra
   width: 100%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 767px) {
   .no-br-desk br {
     display: none;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .no-br-mobile br {
     display: none;
   }
@@ -64,6 +64,7 @@ Template: astra
 }
 .slick-dots li {
   width: 10px;
+  margin: 0 2px;
 }
 .slick-dots li button {
   display: flex;
@@ -138,6 +139,41 @@ Template: astra
   filter: unset !important;
 }
 
+.main-header-menu > li > a, .sub-menu > li > a {
+  font-size: 16px !important;
+}
+
+@media screen and (max-width: 921px) {
+  .ast-mobile-popup-header {
+    justify-content: start !important;
+  }
+  .ast-menu-toggle path {
+    fill: #1A1A1A;
+  }
+  .menu-toggle-close svg {
+    width: 30px;
+    height: 30px;
+  }
+  .menu-toggle-close path {
+    fill: #707070;
+  }
+  .ast-menu-toggle {
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+}
+.sub-menu > li > a .ast-icon {
+  display: none !important;
+}
+@media (min-width: 921px) {
+  .sub-menu {
+    transform: translateX(-25%);
+  }
+  .sub-menu > li > a {
+    text-align: center;
+  }
+}
+
 footer .menu {
   list-style: none;
   margin: 0;
@@ -146,7 +182,7 @@ footer .menu {
   flex-direction: column;
   gap: 16px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   footer .menu {
     gap: 8px;
   }
@@ -168,7 +204,8 @@ footer .copyright a:hover {
 footer .floating-consult-btn {
   position: fixed;
   right: 30px;
-  bottom: 27vh;
+  bottom: 40vh;
+  transform: translateY(120%);
   z-index: 999;
 }
 footer .floating-consult-btn .elementor-button {
@@ -179,14 +216,19 @@ footer .floating-consult-btn .elementor-button {
   width: 100px;
   height: 100px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   footer .floating-consult-btn {
     right: 16px;
-    bottom: 12vh;
+    bottom: 25vh;
   }
   footer .floating-consult-btn .elementor-button {
     width: 80px;
     height: 80px;
+  }
+  footer .floating-consult-btn .elementor-button .elementor-button-text {
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 1.8;
   }
 }
 
@@ -194,7 +236,7 @@ footer .floating-consult-btn .elementor-button {
   right: 30px;
   bottom: 40vh;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   #ast-scroll-top {
     right: 16px;
     bottom: 25vh;
@@ -221,7 +263,7 @@ footer .floating-consult-btn .elementor-button {
   flex-direction: column;
   gap: 12px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .index-location-txt ul {
     gap: 8px;
   }
@@ -231,7 +273,7 @@ footer .floating-consult-btn .elementor-button {
   flex-wrap: wrap;
   line-height: 2;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .index-location-txt ul li {
     line-height: 1.8;
   }
@@ -290,9 +332,18 @@ footer .floating-consult-btn .elementor-button {
 .home-news .news__card {
   margin: 0 20px;
   height: 100%;
+  transform: color 0.4s;
+}
+.home-news .news__card:hover .news__card-title {
+  color: #7D0000;
+}
+.home-news .news__card-link {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
 }
 .home-news .news__thumb {
   overflow: hidden;
@@ -349,7 +400,7 @@ footer .floating-consult-btn .elementor-button {
   background: linear-gradient(to bottom, rgba(254, 254, 254, 0), #FEFEFE);
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 101%;
   left: 0;
   top: 0;
 }
@@ -368,7 +419,7 @@ footer .floating-consult-btn .elementor-button {
   padding-bottom: 20px;
   margin-bottom: 20px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .home-services .services__card .services__body .services__card-title {
     justify-content: start;
     padding-bottom: 10px;
@@ -446,7 +497,7 @@ body.page-id-5 #ast-hf-menu-1 .menu-item.current-menu-item .menu-link {
   gap: 10px;
   padding: 20px 20px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .services__body {
     gap: 6px;
   }
@@ -476,7 +527,7 @@ body.page-id-5 #ast-hf-menu-1 .menu-item.current-menu-item .menu-link {
   color: #4E4E4E;
   font-weight: 300;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .services__body .services__excerpt {
     font-size: 14px;
     line-height: 1.8;
@@ -494,7 +545,7 @@ body.page-id-5 #ast-hf-menu-1 .menu-item.current-menu-item .menu-link {
   min-height: 49px;
   padding: 10px 26px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .services__body .services__link {
     padding: 5px 26px;
     min-height: 36px;
@@ -551,7 +602,7 @@ body.page-id-5 #ast-hf-menu-1 .menu-item.current-menu-item .menu-link {
   margin-bottom: -1px;
   background-color: #E8E8E8;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .services-list .services-list__tab {
     padding: 12px 18px;
     font-size: 20px;
@@ -635,7 +686,7 @@ body.page-template-page-list .ast-container .page-hero, body.archive .ast-contai
   align-items: center;
   padding: 0 24px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   body.page-template-page-list .ast-container .page-hero, body.archive .ast-container .page-hero {
     min-height: 300px;
     padding: 0 16px;
@@ -663,7 +714,7 @@ body.page-template-page-list .ast-container .page-hero .page-image, body.archive
   z-index: 1;
   opacity: 0.3;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   body.page-template-page-list .ast-container .page-hero .page-image, body.archive .ast-container .page-hero .page-image {
     background-position: 25% center;
   }
@@ -696,7 +747,7 @@ body.page-template-page-list .ast-container .page-hero .ph-container .page-title
   font-weight: 800;
   margin-bottom: 0;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   body.page-template-page-list .ast-container .page-hero .ph-container, body.archive .ast-container .page-hero .ph-container {
     margin: 150px auto 30px auto;
     min-height: 140px;
@@ -788,7 +839,7 @@ body.page-template-page-list .ast-container .page-main .list-layout .content-col
   color: #4E4E4E;
   margin-bottom: 0;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   body.page-template-page-list .ast-container .page-main .list-layout .content-col .list .item .desc, body.archive .ast-container .page-main .list-layout .content-col .list .item .desc {
     font-size: 16px;
   }
@@ -854,7 +905,7 @@ body.page-template-page-list .ast-container .page-main .list-layout .sidebar-col
   font-size: 20px;
   line-height: 1.8;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   body.page-template-page-list .ast-container .page-main .list-layout .sidebar-col .widget ul > li *, body.archive .ast-container .page-main .list-layout .sidebar-col .widget ul > li * {
     font-size: 18px;
   }
@@ -866,7 +917,7 @@ body.page-template-page-list .ast-container .page-main .list-layout .sidebar-col
   display: flex;
   justify-content: space-between;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   body.page-template-page-list .ast-container .page-main, body.archive .ast-container .page-main {
     margin-top: 20px;
     margin-bottom: 50px;
@@ -1038,7 +1089,7 @@ body.single .post-navigation .nav-next .ast-post-nav {
 body.search .ast-archive-entry-banner {
   position: relative;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   body.search .ast-archive-entry-banner {
     background-position: 35% center !important;
   }
@@ -1081,7 +1132,7 @@ body.search .ast-row > article .entry-title {
   font-weight: 500;
   margin-bottom: 10px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   body.search .ast-row > article .entry-title {
     font-size: 20px;
   }
@@ -1095,7 +1146,7 @@ body.search .ast-row > article .ast-excerpt-container {
   font-size: 18px;
   color: #4E4E4E;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   body.search .ast-row > article .ast-excerpt-container {
     font-size: 16px;
   }
