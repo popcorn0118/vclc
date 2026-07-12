@@ -87,3 +87,14 @@ function create_custom_taxonomy() {
 
 }
 add_action( 'init', 'create_custom_taxonomy', 0 );
+
+//文章單頁上方"發布日期"
+add_action( 'astra_single_post_banner_title_before', function () {
+    if ( ! is_singular( 'post' ) ) {
+        return;
+    }
+    echo '<div class="article-date">' .
+        esc_html( get_the_date( 'Y.m.d' ) ) .
+    '</div>';
+
+} );

@@ -946,71 +946,89 @@ body.single #content {
 body.single #content article.type-post {
   background-color: #FEFEFE;
 }
-body.single .ast-single-related-posts-container {
+body.single .article-date {
+  font-weight: 400;
+  font-size: 18px;
+  color: #4E4E4E;
+}
+body.single .related-articles {
+  padding: 80px 0;
+  text-align: center;
+  background-color: #FEFEFE;
+}
+body.single .related-articles .related__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+body.single .related-articles .related__title {
+  color: #AA5858;
+  font-weight: 500;
+  margin-bottom: 50px;
+}
+body.single .related-articles .related__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  text-align: left;
+}
+@media screen and (max-width: 767px) {
+  body.single .related-articles .related__grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+body.single .related-articles .related__card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  position: relative;
+  gap: 5px;
 }
-body.single .ast-single-related-posts-container::after {
-  content: "";
-  position: absolute;
+body.single .related-articles .related__card:hover .related__card-title {
+  opacity: 0.6;
+}
+body.single .related-articles .related__card .related__thumb {
+  display: block;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+body.single .related-articles .related__card .related__thumb img {
   width: 100%;
   height: 100%;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
+  object-fit: cover;
 }
-body.single .ast-single-related-posts-container * {
-  color: #fff;
+body.single .related-articles .related__card .related__date {
+  font-size: 16px;
+  color: #4E4E4E;
 }
-body.single .ast-single-related-posts-container .ast-related-posts-title-section, body.single .ast-single-related-posts-container .ast-related-posts-wrapper {
-  width: 1240px;
-  max-width: 100%;
-  position: relative;
-  z-index: 2;
-}
-body.single .ast-single-related-posts-container .ast-related-posts-wrapper {
-  gap: 40px;
-  position: relative;
-  z-index: 2;
-}
-body.single .ast-single-related-posts-container .ast-related-posts-wrapper > article .entry-title a {
+body.single .related-articles .related__card .related__card-title {
   display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  font-weight: 400;
-  color: #fff;
+  margin-bottom: 0;
+  transition: opacity 0.4s;
 }
-body.single .ast-single-related-posts-container .ast-related-posts-wrapper > article .entry-meta, body.single .ast-single-related-posts-container .ast-related-posts-wrapper > article .entry-meta * {
-  font-weight: 300;
-  font-size: 16px;
-}
-body.single .ast-single-related-posts-container .ast-related-posts-wrapper > article .ast-related-post-excerpt {
-  font-weight: 300;
-  font-size: 16px;
-}
-body.single .ast-single-related-posts-container .ast-related-posts-wrapper > article .read-more {
-  display: none;
-}
-body.single .ast-single-related-posts-container .ast-related-posts-wrapper > article .entry-title {
-  margin-bottom: 15px;
-}
-body.single .ast-single-related-posts-container .ast-related-posts-wrapper > article .entry-title > a {
-  font-size: 20px;
+body.single .related-articles .related__card .related__card-title a {
+  color: #AA5858;
   font-weight: 500;
+  line-height: 1.8;
 }
-body.single .ast-single-related-posts-container .ast-related-posts-wrapper > article:hover .entry-title > a {
-  opacity: 0.7;
+body.single .related-articles .related__card .related__terms {
+  font-size: 16px;
+  color: #1A1A1A;
+}
+body.single .related-articles .related__card .related__excerpt {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-height: 1.8;
+  font-size: 16px;
+  color: #4E4E4E;
+  margin-bottom: 0;
 }
 body.single .post-navigation {
   padding: 80px 0 30px 0;
