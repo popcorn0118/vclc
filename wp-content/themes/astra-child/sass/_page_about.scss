@@ -33,29 +33,92 @@ body.page-id-5 {
 }
 
 
+/* =================================
+   關於我們 - 共用拖曳區塊
+ * ================================== */
+
 .js-drag-scroll {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 30px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-left: max(20px, calc((100vw - 1200px) / 2));
+    padding-right: 20px;
+    user-select: none;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+
+    @include sm() {
+        gap: 20px;
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
     .item {
+        flex: 0 0 auto;
         max-width: 80% !important;
+    }
+
+    img {
+        display: block;
+        pointer-events: none;
+        user-select: none;
+    }
+
+    &.is-dragging {
+        cursor: grabbing;
+
+        * {
+            pointer-events: none;
+        }
     }
 }
 
-// 專業團隊
+@media (hover: hover) {
+    .js-drag-scroll {
+        cursor: grab;
+
+        &.is-dragging {
+            cursor: grabbing;
+        }
+    }
+}
+
+
+/* =================================
+   專業團隊
+ * ================================== */
+
 .about-team {
+    align-items: stretch;
     .item {
+        width: 523px;
         height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-self: stretch;
         > div {
             &:first-of-type {
+                flex-shrink: 0;
                 aspect-ratio: 523 / 550;
             }
+
             &:nth-of-type(2) {
                 position: relative;
                 height: 100%;
+                flex: 1;
+                display: flex;
                 &::before {
                     content: '';
                     width: 10px;
                     height: 100%;
+                    flex-shrink: 0;
                     background-color: $primary;
                     border-radius: 0 0 5px 5px;
+
                     @include sm() {
                         width: 5px;
                         border-radius: 0 0 2.5px 2.5px;
@@ -66,81 +129,13 @@ body.page-id-5 {
     }
 }
 
-// 事務所環境
-.about-office {
-    .item {
 
-    }
-}
-
-.about-team,
-.about-office {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 30px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    padding-left: max(20px, calc((100vw - 1200px) / 2));
-    padding-right: 20px;
-    cursor: grab;
-    user-select: none;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    @include sm() {
-        gap: 20px;
-    }
-
-    &::-webkit-scrollbar {
-        display: none;
-    }
-
-    &.is-dragging {
-        cursor: grabbing;
-    }
-
-    .item {
-        flex: 0 0 auto;
-    }
-
-    img {
-        display: block;
-        pointer-events: none;
-        user-select: none;
-    }
-}
-
-.about-team {
-
-    .item {
-        width: 523px;
-    }
-
-}
+/* =================================
+   事務所環境
+ * ================================== */
 
 .about-office {
-
     .item {
         width: 600px;
     }
-
-}
-
-.about-team.is-dragging *,
-.about-office.is-dragging * {
-    pointer-events: none;
-}
-
-@media (hover: hover) {
-
-    .about-team,
-    .about-office {
-
-        cursor: grab;
-
-        &.is-dragging {
-            cursor: grabbing;
-        }
-
-    }
-
 }
