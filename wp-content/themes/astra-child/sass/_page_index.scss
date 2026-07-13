@@ -103,7 +103,7 @@
     .news__card {
         margin: 0 20px;
         height: 100%;
-        transform:  color 0.4s;
+        transform: all 0.4s;
         &:hover {
             .news__card-title {
                 color: $acc
@@ -160,11 +160,11 @@
 
     @include sm() {
         .news__slider {
-            margin: 0;
+            // margin: 0;
         }
 
         .news__card {
-            margin: 0;
+            // margin: 0;
         }
     }
 }

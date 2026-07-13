@@ -98,3 +98,20 @@ add_action( 'astra_single_post_banner_title_before', function () {
     '</div>';
 
 } );
+
+// 文章單頁上/下篇導覽：改用 Astra 新版樣式（PREVIOUS/NEXT + 文章標題），僅影響「文章」(post)
+add_filter( 'astra_single_post_navigation', function ( $args ) {
+    if ( ! is_singular( 'post' ) ) {
+        return $args;
+    }
+
+    $args['prev_text'] = '<span class="ast-post-nav" aria-hidden="true">'
+        . Astra_Builder_UI_Controller::fetch_svg_icon( 'long-arrow-alt-left' )
+        . ' ' . esc_html__( 'Previous', 'astra' ) . '</span> <p>%title</p>';
+
+    $args['next_text'] = '<span class="ast-post-nav" aria-hidden="true">'
+        . esc_html__( 'Next', 'astra' )
+        . ' ' . Astra_Builder_UI_Controller::fetch_svg_icon( 'long-arrow-alt-right' ) . '</span> <p>%title</p>';
+
+    return $args;
+} );
