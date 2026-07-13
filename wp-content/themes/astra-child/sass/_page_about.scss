@@ -6,22 +6,22 @@ body.page-id-5 {
     .site-logo-img img {
         filter: url(#ast-img-color-filter-2) !important;
     }
+
     #ast-hf-menu-1 {
-        .menu-item {
-            .menu-link {
-                color:  $bg;
+        > .menu-item {
+            > .menu-link {
+                color: $bg;
+
                 &:hover {
                     color: $acc;
                 }
             }
-            &.current-menu-item .menu-link {
+
+            &.current-menu-item > .menu-link {
                 color: $acc;
             }
         }
-       
-        
     }
-   
 }
 
 .about-mission-vision {
