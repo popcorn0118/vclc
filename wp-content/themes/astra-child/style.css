@@ -462,6 +462,96 @@ body.page-id-5 #ast-hf-menu-1 .menu-item.current-menu-item .menu-link {
   }
 }
 
+.js-drag-scroll .item {
+  max-width: 80% !important;
+}
+
+.about-team .item {
+  height: 100%;
+}
+.about-team .item > div:first-of-type {
+  aspect-ratio: 523/550;
+}
+.about-team .item > div:nth-of-type(2) {
+  position: relative;
+  height: 100%;
+}
+.about-team .item > div:nth-of-type(2)::before {
+  content: "";
+  width: 10px;
+  height: 100%;
+  background-color: #AA5858;
+  border-radius: 0 0 5px 5px;
+}
+@media screen and (max-width: 576px) {
+  .about-team .item > div:nth-of-type(2)::before {
+    width: 5px;
+    border-radius: 0 0 2.5px 2.5px;
+  }
+}
+
+.about-team,
+.about-office {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 30px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-left: max(20px, (100vw - 1200px) / 2);
+  padding-right: 20px;
+  cursor: grab;
+  user-select: none;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+@media screen and (max-width: 576px) {
+  .about-team,
+  .about-office {
+    gap: 20px;
+  }
+}
+.about-team::-webkit-scrollbar,
+.about-office::-webkit-scrollbar {
+  display: none;
+}
+.about-team.is-dragging,
+.about-office.is-dragging {
+  cursor: grabbing;
+}
+.about-team .item,
+.about-office .item {
+  flex: 0 0 auto;
+}
+.about-team img,
+.about-office img {
+  display: block;
+  pointer-events: none;
+  user-select: none;
+}
+
+.about-team .item {
+  width: 523px;
+}
+
+.about-office .item {
+  width: 600px;
+}
+
+.about-team.is-dragging *,
+.about-office.is-dragging * {
+  pointer-events: none;
+}
+
+@media (hover: hover) {
+  .about-team,
+  .about-office {
+    cursor: grab;
+  }
+  .about-team.is-dragging,
+  .about-office.is-dragging {
+    cursor: grabbing;
+  }
+}
 .location-map iframe {
   height: auto !important;
   aspect-ratio: 378/282;
