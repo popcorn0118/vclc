@@ -249,6 +249,9 @@ footer .floating-consult-btn .elementor-button {
 .index-image-m {
   aspect-ratio: 768/720;
 }
+.index-image-m::before {
+  top: -1px;
+}
 
 .index-location-map iframe {
   height: auto !important;
@@ -328,6 +331,11 @@ footer .floating-consult-btn .elementor-button {
 }
 .home-news .news__slider .slick-slide > div {
   height: 100%;
+}
+@media screen and (max-width: 576px) {
+  .home-news .news__slider .slick-dots {
+    padding: 0 20px;
+  }
 }
 .home-news .news__card {
   margin: 0 20px;

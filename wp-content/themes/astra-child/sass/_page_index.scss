@@ -4,6 +4,9 @@
 //首圖-手機
 .index-image-m {
     aspect-ratio: 768 / 720;
+    &::before {
+        top: -1px;
+    }
 }
 
 //服務據點
@@ -97,6 +100,11 @@
 
             > div {
                 height: 100%;
+            }
+        }
+        .slick-dots {
+            @include sm() {
+                padding: 0 20px;
             }
         }
     }
