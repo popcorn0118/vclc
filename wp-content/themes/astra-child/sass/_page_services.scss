@@ -113,8 +113,8 @@
 
     // 分類頁籤
     .services-list__tabs {
-        // display: none; // 暫時隱藏
         display: flex;
+        display: none; // 暫時隱藏
         flex-wrap: wrap;
         border-bottom: 1px solid rgba($text, 0.1);
         gap: 8px;

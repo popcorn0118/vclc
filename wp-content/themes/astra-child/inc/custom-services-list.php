@@ -127,7 +127,7 @@ $q = new WP_Query( $query_args );
                                     <?php echo wp_kses_post( get_the_excerpt() ); ?>
                                 </div>
 
-                                <a class="services__link" href="<?php //the_permalink(); ?>">
+                                <a class="services__link" href="<?php the_permalink(); ?>">
                                     詳細說明
                                 </a>
 
