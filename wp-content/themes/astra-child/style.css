@@ -32,6 +32,14 @@ Template: astra
   white-space: nowrap;
 }
 
+button:hover, button:focus, a:hover, a:focus {
+  outline: 0 !important;
+}
+
+#menu-toggle-close:hover, #menu-toggle-close:focus, .menu-toggle:hover, .menu-toggle:focus {
+  border: 0;
+}
+
 .btn .elementor-button-icon > i {
   transform: scale(1.7);
   margin-right: 8px;
@@ -158,7 +166,14 @@ Template: astra
     fill: #707070;
   }
   .ast-menu-toggle {
-    top: 10px !important;
+    top: 0px !important;
+    right: 0;
+    left: 0 !important;
+    width: 100%;
+    height: 69px;
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-end;
   }
 }
 .sub-menu > li > a .ast-icon {
