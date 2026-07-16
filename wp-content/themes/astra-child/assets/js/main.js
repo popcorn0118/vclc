@@ -151,3 +151,40 @@ jQuery(window).on('load', function () {
     }
 
 });
+
+
+/* =================================
+   手機版漢堡選單 - 修正圖示與選單開合不同步的問題
+
+   Astra 內建的手機選單有兩套點擊事件：DOMContentLoaded 就綁定的舊版
+   （只切換漢堡鈕的 .toggled class，適用 classic 版型的選單，不適用本站的
+   off-canvas 選單）， 以及要等 window load 才會換上、真正負責開合
+   #ast-mobile-popup 的新版（但新版不會切換 .toggled class）。
+   在影片、圖片等資源下載較久時，window load 明顯延後，使用者容易在
+   新版事件生效前點到舊版，導致「圖示變了選單卻打不開」或反過來
+   「選單開了圖示卻沒變」。
+ * ================================== */
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    // 提前觸發 Astra 內建的選單初始化，不必等到 window load 才換上正確的開合事件。
+    document.dispatchEvent(new Event('astLayoutWidthChanged'));
+
+    const mobilePopup = document.getElementById('ast-mobile-popup');
+    const menuToggleBtn = document.querySelector('.menu-toggle.main-header-menu-toggle');
+
+    if (mobilePopup && menuToggleBtn) {
+
+        // 讓漢堡鈕的圖示永遠跟著選單「實際開合狀態」走，不受哪一套事件生效影響。
+        const syncToggleIcon = function () {
+            menuToggleBtn.classList.toggle('toggled', mobilePopup.classList.contains('active'));
+        };
+
+        new MutationObserver(syncToggleIcon).observe(mobilePopup, {
+            attributes: true,
+            attributeFilter: ['class']
+        });
+
+    }
+
+});
