@@ -772,7 +772,6 @@ body.page-template-page-list #content .ast-container, body.archive #content .ast
 body.page-template-page-list .ast-container, body.archive .ast-container {
   display: flex;
   flex-direction: column;
-  padding: 0;
 }
 body.page-template-page-list .ast-container .page-hero, body.archive .ast-container .page-hero {
   position: relative;

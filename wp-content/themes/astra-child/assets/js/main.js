@@ -129,4 +129,25 @@ jQuery(window).on('load', function () {
 
     });
 
+
+
+    /* =================================
+        關於我們影片 - 播放結束顯示 Poster
+    * ================================== */
+
+    const $video = jQuery('#about-video video.elementor-video');
+
+    if ($video.length) {
+        const video = $video[0];
+        $video.on('ended', function () {
+
+            // 關閉 autoplay，避免 load() 後立即再播放
+            video.autoplay = false;
+            video.removeAttribute('autoplay');
+
+            // 回到影片初始狀態，重新顯示 Poster
+            video.load();
+        });
+    }
+
 });
