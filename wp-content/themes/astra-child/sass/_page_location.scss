@@ -1,6 +1,16 @@
 @use 'variable' as *;
 @use 'mixin' as *;
 
+#location {
+    @media (max-width: 883px) {
+        grid-template-columns: repeat(1, 1fr) !important;
+        gap: 80px !important;
+    }
+    @include sm() {
+        gap: 50px !important;
+    }
+}
+
 .location-map {
     iframe {
             height: auto !important;

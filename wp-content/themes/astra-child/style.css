@@ -575,6 +575,18 @@ body.page-id-5 #ast-hf-menu-1 > .menu-item.current-menu-item > .menu-link {
   width: 600px;
 }
 
+@media (max-width: 883px) {
+  #location {
+    grid-template-columns: repeat(1, 1fr) !important;
+    gap: 80px !important;
+  }
+}
+@media screen and (max-width: 576px) {
+  #location {
+    gap: 50px !important;
+  }
+}
+
 .location-map iframe {
   height: auto !important;
   aspect-ratio: 378/282;
