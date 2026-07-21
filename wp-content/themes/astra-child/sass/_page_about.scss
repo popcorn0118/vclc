@@ -87,6 +87,21 @@ body.page-id-5 {
     }
 }
 
+// 左右箭頭（桌機）／底部點點（手機）－ 沿用全站 .slick-arrow / .slick-dots 樣式
+.js-drag-scroll ~ .slick-arrow {
+    @include sm() {
+        display: none;
+    }
+}
+
+.js-drag-scroll ~ .slick-dots {
+    display: none;
+
+    @include sm() {
+        display: flex;
+    }
+}
+
 
 /* =================================
    關於我們 - 共用 Slick 區塊（新版，供客戶選用）

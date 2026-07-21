@@ -157,6 +157,114 @@ jQuery(window).on('load', function () {
 
         });
 
+
+        // ---- 左右箭頭 + 底部點點（沿用原生 scroll，不做 index 分頁，避免超出內容出現空白）----
+
+        const items = Array.from(slider.children);
+
+        if (items.length < 2) return;
+
+        const getMaxScrollLeft = () => slider.scrollWidth - slider.clientWidth;
+
+        const getStep = () => (
+            items.length > 1
+                ? items[1].getBoundingClientRect().left - items[0].getBoundingClientRect().left
+                : items[0].getBoundingClientRect().width
+        );
+
+        const prevBtn = document.createElement('button');
+        prevBtn.type = 'button';
+        prevBtn.className = 'slick-arrow slick-prev';
+        prevBtn.setAttribute('aria-label', '上一張');
+
+        const nextBtn = document.createElement('button');
+        nextBtn.type = 'button';
+        nextBtn.className = 'slick-arrow slick-next';
+        nextBtn.setAttribute('aria-label', '下一張');
+
+        const dotsList = document.createElement('ul');
+        dotsList.className = 'slick-dots';
+
+        const dotItems = items.map((item, i) => {
+
+            const li = document.createElement('li');
+            const dotBtn = document.createElement('button');
+
+            dotBtn.type = 'button';
+            dotBtn.setAttribute('aria-label', `第 ${i + 1} 張`);
+
+            li.appendChild(dotBtn);
+            dotsList.appendChild(li);
+
+            li.addEventListener('click', () => scrollToItem(i));
+
+            return li;
+
+        });
+
+        slider.insertAdjacentElement('afterend', dotsList);
+        slider.insertAdjacentElement('afterend', nextBtn);
+        slider.insertAdjacentElement('afterend', prevBtn);
+
+        function scrollToItem(index) {
+
+            const item = items[index];
+            const delta = item.getBoundingClientRect().left - slider.getBoundingClientRect().left;
+            const target = Math.max(0, Math.min(slider.scrollLeft + delta, getMaxScrollLeft()));
+
+            slider.scrollTo({ left: target, behavior: 'smooth' });
+
+        }
+
+        prevBtn.addEventListener('click', () => {
+            slider.scrollTo({ left: Math.max(0, slider.scrollLeft - getStep()), behavior: 'smooth' });
+        });
+
+        nextBtn.addEventListener('click', () => {
+            slider.scrollTo({ left: Math.min(getMaxScrollLeft(), slider.scrollLeft + getStep()), behavior: 'smooth' });
+        });
+
+        function updateNavState() {
+
+            const max = getMaxScrollLeft();
+
+            prevBtn.disabled = slider.scrollLeft <= 1;
+            prevBtn.classList.toggle('slick-disabled', prevBtn.disabled);
+
+            nextBtn.disabled = slider.scrollLeft >= max - 1;
+            nextBtn.classList.toggle('slick-disabled', nextBtn.disabled);
+
+            const sliderLeft = slider.getBoundingClientRect().left;
+            let activeIndex = 0;
+            let closestDist = Infinity;
+
+            items.forEach((item, i) => {
+                const dist = Math.abs(item.getBoundingClientRect().left - sliderLeft);
+                if (dist < closestDist) {
+                    closestDist = dist;
+                    activeIndex = i;
+                }
+            });
+
+            dotItems.forEach((li, i) => li.classList.toggle('slick-active', i === activeIndex));
+
+        }
+
+        let ticking = false;
+
+        slider.addEventListener('scroll', () => {
+            if (ticking) return;
+            ticking = true;
+            requestAnimationFrame(() => {
+                updateNavState();
+                ticking = false;
+            });
+        });
+
+        window.addEventListener('resize', updateNavState);
+
+        updateNavState();
+
     });
 
 

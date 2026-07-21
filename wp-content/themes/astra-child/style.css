@@ -531,6 +531,21 @@ body.page-id-5 #ast-hf-menu-1 > .menu-item.current-menu-item > .menu-link {
     cursor: grabbing;
   }
 }
+@media screen and (max-width: 576px) {
+  .js-drag-scroll ~ .slick-arrow {
+    display: none;
+  }
+}
+
+.js-drag-scroll ~ .slick-dots {
+  display: none;
+}
+@media screen and (max-width: 576px) {
+  .js-drag-scroll ~ .slick-dots {
+    display: flex;
+  }
+}
+
 /* =================================
    關於我們 - 共用 Slick 區塊（新版，供客戶選用）
  * ================================== */
