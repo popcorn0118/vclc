@@ -96,6 +96,9 @@ body.page-id-5 {
 
 .js-drag-scroll ~ .slick-dots {
     display: none;
+    position: static; // 原本的 absolute 是靠 Elementor 外層元素定位，層級不固定，實測會被裁掉／飄走，改回正常排版流即可穩定顯示在 slider 正下方
+    padding-left: max(20px, calc((100vw - 1200px) / 2));
+    padding-right: 20px;
 
     @include sm() {
         display: flex;
