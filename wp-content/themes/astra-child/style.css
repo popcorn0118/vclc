@@ -592,6 +592,10 @@ body.page-id-5 #ast-hf-menu-1 > .menu-item.current-menu-item > .menu-link {
   aspect-ratio: 378/282;
 }
 
+body.page-id-4921 #ast-hf-menu-1 .menu-item:not(.services-show), body.page-id-4921 #ast-hf-menu-1-mobile .menu-item:not(.services-show), body.single-service #ast-hf-menu-1 .menu-item:not(.services-show), body.single-service #ast-hf-menu-1-mobile .menu-item:not(.services-show) {
+  display: none;
+}
+
 .services__card {
   margin: 0 5px;
   height: 100%;
