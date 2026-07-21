@@ -89,6 +89,21 @@ body.page-id-5 {
 
 // 左右箭頭（桌機）／底部點點（手機）－ 沿用全站 .slick-arrow / .slick-dots 樣式
 .js-drag-scroll ~ .slick-arrow {
+    top: 40px;
+    &:focus {
+        background-color: $primary;
+    }
+    &:hover, &.slick-disabled {
+        background: rgba($primary, 0.6);
+    }
+    &.slick-prev {
+        transform: translate(-150%, 0);
+        right: max(20px, calc((100vw - 1200px) / 2));
+    }
+    &.slick-next {
+        transform: translate(0, 0);
+        right: max(20px, calc((100vw - 1200px) / 2));
+    }
     @include sm() {
         display: none;
     }
@@ -99,7 +114,7 @@ body.page-id-5 {
     position: static; // 原本的 absolute 是靠 Elementor 外層元素定位，層級不固定，實測會被裁掉／飄走，改回正常排版流即可穩定顯示在 slider 正下方
     padding-left: max(20px, calc((100vw - 1200px) / 2));
     padding-right: 20px;
-
+    margin-top: -15px;
     @include sm() {
         display: flex;
     }
@@ -107,7 +122,7 @@ body.page-id-5 {
 
 
 /* =================================
-   關於我們 - 共用 Slick 區塊（新版，供客戶選用）
+   關於我們 - 共用 Slick 區塊（新版，暫無用到）
  * ================================== */
 
 .js-about-slider {

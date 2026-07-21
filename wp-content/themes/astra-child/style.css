@@ -531,6 +531,23 @@ body.page-id-5 #ast-hf-menu-1 > .menu-item.current-menu-item > .menu-link {
     cursor: grabbing;
   }
 }
+.js-drag-scroll ~ .slick-arrow {
+  top: 40px;
+}
+.js-drag-scroll ~ .slick-arrow:focus {
+  background-color: #AA5858;
+}
+.js-drag-scroll ~ .slick-arrow:hover, .js-drag-scroll ~ .slick-arrow.slick-disabled {
+  background: rgba(170, 88, 88, 0.6);
+}
+.js-drag-scroll ~ .slick-arrow.slick-prev {
+  transform: translate(-150%, 0);
+  right: max(20px, (100vw - 1200px) / 2);
+}
+.js-drag-scroll ~ .slick-arrow.slick-next {
+  transform: translate(0, 0);
+  right: max(20px, (100vw - 1200px) / 2);
+}
 @media screen and (max-width: 576px) {
   .js-drag-scroll ~ .slick-arrow {
     display: none;
@@ -542,6 +559,7 @@ body.page-id-5 #ast-hf-menu-1 > .menu-item.current-menu-item > .menu-link {
   position: static;
   padding-left: max(20px, (100vw - 1200px) / 2);
   padding-right: 20px;
+  margin-top: -15px;
 }
 @media screen and (max-width: 576px) {
   .js-drag-scroll ~ .slick-dots {
@@ -550,7 +568,7 @@ body.page-id-5 #ast-hf-menu-1 > .menu-item.current-menu-item > .menu-link {
 }
 
 /* =================================
-   關於我們 - 共用 Slick 區塊（新版，供客戶選用）
+   關於我們 - 共用 Slick 區塊（新版，暫無用到）
  * ================================== */
 .js-about-slider .slick-list {
   padding-left: max(20px, (100vw - 1200px) / 2);
@@ -1453,3 +1471,5 @@ body.search .no-results.not-found .search-submit .ast-icon svg {
 .pagination .page-numbers.next {
   margin-bottom: 50px;
 }
+
+/*# sourceMappingURL=style.css.map */
