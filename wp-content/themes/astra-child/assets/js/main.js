@@ -80,6 +80,36 @@ jQuery(window).on('load', function () {
 
 
     /* =================================
+       關於我們(專業團隊、事務所環境) - Slick 版本（新版，供客戶選用）
+     * ================================== */
+
+    const $aboutSlider = jQuery('.js-about-slider');
+
+    if ($aboutSlider.length && typeof jQuery.fn.slick !== 'undefined') {
+
+        $aboutSlider.slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            variableWidth: true,
+            arrows: true,
+            dots: false,
+            infinite: false,
+            adaptiveHeight: false,
+            responsive: [
+                {
+                    breakpoint: 576,
+                    settings: {
+                        dots: true,
+                        arrows: false,
+                    }
+                }
+            ]
+        });
+
+    }
+
+
+    /* =================================
        關於我們(專業團隊、事務所環境) - 拖曳捲動
      * ================================== */
 

@@ -532,6 +532,43 @@ body.page-id-5 #ast-hf-menu-1 > .menu-item.current-menu-item > .menu-link {
   }
 }
 /* =================================
+   關於我們 - 共用 Slick 區塊（新版，供客戶選用）
+ * ================================== */
+.js-about-slider .slick-list {
+  padding-left: max(20px, (100vw - 1200px) / 2);
+  padding-right: 20px;
+  overflow: hidden;
+}
+.js-about-slider .slick-track {
+  display: flex;
+  align-items: stretch;
+}
+.js-about-slider .slick-slide {
+  height: auto;
+  margin-right: 30px;
+}
+@media screen and (max-width: 576px) {
+  .js-about-slider .slick-slide {
+    margin-right: 20px;
+  }
+}
+.js-about-slider .slick-slide > div {
+  height: 100%;
+}
+.js-about-slider .item {
+  height: 100%;
+}
+.js-about-slider img {
+  display: block;
+  pointer-events: none;
+  user-select: none;
+}
+.js-about-slider .slick-dots {
+  padding-left: max(20px, (100vw - 1200px) / 2);
+  padding-right: 20px;
+}
+
+/* =================================
    專業團隊
  * ================================== */
 .about-team {
@@ -1398,5 +1435,3 @@ body.search .no-results.not-found .search-submit .ast-icon svg {
 .pagination .page-numbers.next {
   margin-bottom: 50px;
 }
-
-/*# sourceMappingURL=style.css.map */

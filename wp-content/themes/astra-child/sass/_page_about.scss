@@ -89,6 +89,52 @@ body.page-id-5 {
 
 
 /* =================================
+   關於我們 - 共用 Slick 區塊（新版，供客戶選用）
+ * ================================== */
+
+.js-about-slider {
+    .slick-list {
+        padding-left: max(20px, calc((100vw - 1200px) / 2));
+        padding-right: 20px;
+        overflow: hidden;
+    }
+
+    .slick-track {
+        display: flex;
+        align-items: stretch;
+    }
+
+    .slick-slide {
+        height: auto;
+        margin-right: 30px;
+
+        @include sm() {
+            margin-right: 20px;
+        }
+
+        > div {
+            height: 100%;
+        }
+    }
+
+    .item {
+        height: 100%;
+    }
+
+    img {
+        display: block;
+        pointer-events: none;
+        user-select: none;
+    }
+
+    .slick-dots {
+        padding-left: max(20px, calc((100vw - 1200px) / 2));
+        padding-right: 20px;
+    }
+}
+
+
+/* =================================
    專業團隊
  * ================================== */
 
